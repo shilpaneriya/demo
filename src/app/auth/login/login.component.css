@@ -1,0 +1,119 @@
+
+.login-form-wrapper {
+    max-width: 400px;
+    width: 100%;
+    margin: 7% auto;
+}
+.login-form-box {
+    color: #fff;
+    padding: 2.5em;
+    margin: 3em auto;
+    background: rgba(0, 0, 0, 0.40);
+}
+
+.login-form-wrapper .form-control {
+    padding: 0.7em 1em;
+    margin: 5px 0 20px 0;
+    color: #fff;
+    width: 100%;
+    background: transparent;
+    border: 1px solid #d9d9ce;
+    font-size: 13px;
+    outline: none;
+    letter-spacing: 0.9px;
+    border-radius: 0;
+    font-weight: 300;
+}
+.login-form-wrapper label {
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+.check {
+    margin: 1em 0 1.5em;
+}
+.check label {
+    margin: 0;
+    color: #fff;
+}
+.checkbox {
+    position: relative;
+    padding-left: 1.5em;
+    cursor: pointer;
+}
+.checkbox input + i:after {
+    content: '';
+    background: url(../../../assets/images/check.png) no-repeat 1px;
+    top: 0px;
+    left: 0px;
+    width: 15px;
+    height: 15px;
+    font: normal 12px/16px FontAwesome;
+    text-align: center;
+}
+
+.login-btn {
+    width: 100%;
+    text-transform: uppercase;
+    background: #d6ff5f;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0.7em 0;
+    letter-spacing: 1px;
+}
+.login-btn:hover, .login-btn:focus, .login-btn:active {
+    color: #000;
+    background: #d6ff5f;
+}
+
+.forgetPassLink a {
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    font-weight: 300;
+}
+.forgetPassLink {
+    text-align: center;
+    font-size: 16px;
+    padding: 15px 0;
+}
+.registerButton {
+    color: #fff;
+    font-weight: 400;
+    padding: 8px 20px;
+    border: 1px solid #fff;
+    letter-spacing: 0.8px;
+    font-size: 15px;
+    text-decoration: none;
+}
+.registerButton:hover, .registerButton:active, .registerButton:focus {
+    color: #d6ff5f;
+    border: 1px solid #d6ff5f;
+}
+.registerUserLink {
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+}
+.registerUserLink {
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 0.8px;
+}
+.form-tagline {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 0.6px;
+    padding-bottom: 10px;
+}
+
+input.ng-invalid.ng-touched  {
+    border: 1px solid red;
+}

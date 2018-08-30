@@ -1,0 +1,45 @@
+<div class="main-content-wrapper">
+<div class="container">
+  <div class="row">
+      <div class="col-md-12">
+        <div class="login-form-wrapper">
+          <div class="project-logo"><img src="../assets/images/logo.png"></div>
+          <div class="login-form-box">
+              <p class="form-tagline">Sign in to start your session</p>
+            <form (ngSubmit)="onLogin(myLoginForm)" #myLoginForm="ngForm">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="text" id="text" name="email" class="form-control" ngModel  email #email="ngModel">
+              <!-- <input type="email" id="email" name="email" class="form-control" ngModel required email #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"> -->
+              <!-- <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+                <div *ngIf="email.errors.required">Email field is required!</div>
+                <div *ngIf="email.errors.pattern">Please enter valid email!</div>
+              </div> -->
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" ngModel #password="ngModel" class="form-control" required  minlength="6">
+                <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+                  <div *ngIf="password.errors.required">Password field is required!</div>
+                  <div *ngIf="password.errors.minlength">Password is too short.</div>
+                </div>
+            </div>
+            <div class="form-group">
+              <div class="check">
+                  <label class="checkbox w3l"><input type="checkbox" name="checkbox" required="required"><i> </i>Remember me</label>
+              </div>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary login-btn" type="submit" [disabled]="!myLoginForm.valid">Login</button>
+            </div>
+            </form>
+            <p class="forgetPassLink">
+                <a routerLink="/forgot-password">I forgot my password</a>
+            </p>
+            <p class="registerUserLink"> To register new account <span>→</span> <a class="registerButton" routerLink="/register"> Click Here</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</div>

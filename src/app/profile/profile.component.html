@@ -1,0 +1,78 @@
+<div class="wrapper">
+  <app-sidebar></app-sidebar>
+  <div class="main-panel">
+    <app-header></app-header>
+    <div class="content">
+      <div class="conatiner-fluid">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="user-profile-edit-wrapper">
+                <ul class="nav nav-tabs">
+                    <li class="profile-tab active"><a data-toggle="tab" href="#profile">Profile</a></li>
+                    <li class="profile-tab"><a data-toggle="tab" href="#changePassword">Change Password</a></li>
+                  </ul>
+                  <div class="tab-content">
+                    <div id="profile" class="tab-pane fade in active">
+                        <app-update-profile></app-update-profile>
+                    </div>
+                    <div id="changePassword" class="tab-pane fade">
+                        <app-change-password></app-change-password>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="user-image-wrapper">
+              <div class="user-profile-image">
+                  <div class="profile-image-wrapper" style="text-align:center;">
+                    <img [src]="placeholder" class="img-responsive" style="width:170px;border-radius:50%;padding:3px;border: 6px solid #FFFFFF;border-color:#e0e0e0;margin:0 auto;">
+                    <!-- <img [src]="image" class="img-responsive" style="width:180px;border-radius:50%;padding:10px;border: 5px solid #FFFFFF;border-color:#EEEEEE;margin:0 auto;"> -->
+                  </div>
+                  <div class="edit-profile-image">
+                    <span class="text-center edit-image" title="Edit profile picture" (click)="openModal(template)">
+                        <i class="fa fa-camera"></i>
+                    </span>
+ 
+                    <!--Bootstrap File Uploading Modal Code -->
+
+                    <ng-template #template>
+                      <div class="modal-header">
+                        <h4 class="modal-title pull-left" style="padding: 0 20px;">Upload profile picture</h4>
+                        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                          <div class="file-upload-block">
+                              <label for="file-upload" class="custom-file-upload">
+                                  <i class="fa fa-cloud-upload"></i> Select File...
+                              </label>
+                              <input id="file-upload" (change)="handleFileSelect($event)" type="file" name="fileName"/>
+                                <span style="font-style: italic;font-size: 16px;color: #a94442;font-weight: 400;">
+                                    <img [src]="this.newProfilePicture" class="img-responsive" style="width:80px;border-radius:50%;" name="fileContents">
+                                     {{this.filename}} 
+                                     <!-- {{this.newProfilePicture}} -->
+                                </span>
+                          </div>
+                      </div>
+                      <div class="modal-footer">
+                          <!-- <img [src]="this.newProfilePicture" class="img-responsive" style="width:80px;border-radius:50%;"> -->
+                          <button type="button" class="btn btn-primary upload-img-btn" (click)="onClick(filename, fileContents)"> Upload Image </button>
+                          <button type="button" class="btn btn-danger cancle-btn" aria-label="Close" (click)="modalRef.hide()"> Close </button>
+                      </div>
+                    </ng-template>
+
+
+                  </div>
+              </div>
+              <div class="user-info">
+                <h3 class="user-fullname"> {{fullName}} </h3>
+                <h4 class="user-email"> {{email}} </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

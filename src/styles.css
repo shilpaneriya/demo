@@ -1,1 +1,270 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: rgba(203, 203, 210, 0.15);
+    overflow: hidden;
+}
+.project-logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main-content-wrapper {
+    background: url(./assets/images/form-bg1.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+}
+
+/* .main-panel {
+    background-image: url(./assets/images/background.jpg) !important;
+    background-size: cover !important;
+    background-position: center center !important;
+} */
+
+.alert.alert-danger {
+    background: none;
+    border: none;
+    text-align: right !important;
+    padding: 0;
+    color: #a94442;
+    letter-spacing: 0.8px;
+    font-weight: 400;
+    padding: 5px 0;
+}
+
+.tab-content {
+    border: 1px solid #ccc;
+    background: rgba(255, 255, 255, 1);
+    padding: 30px 15px;
+    border-top: none;
+    min-height: 420px;
+}
+
+/* Sidebar CSS */
+
+.wrapper {
+    position: relative;
+    top: 0;
+    height: 100vh;
+}
+.sidebar, .main-panel {
+    overflow: auto;
+    max-height: 100%;
+    height: 100%;
+    -webkit-transition-property: top, bottom;
+    transition-property: top, bottom;
+    -webkit-transition-duration: .2s, .2s;
+    transition-duration: .2s, .2s;
+    -webkit-transition-timing-function: linear, linear;
+    transition-timing-function: linear, linear;
+    -webkit-overflow-scrolling: touch;
+}
+.sidebar, body>.navbar-collapse {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 260px;
+    display: block;
+    z-index: 1;
+    color: #fff;
+    font-weight: 300;
+    background-size: cover;
+    background-position: center center;
+}
+.main-panel {
+    /* background: rgba(203, 203, 210, 0.15); */
+    background: #5f5e5e;
+    position: relative;
+    float: right;
+    width: calc(100% - 260px);
+    min-height: 100%;
+}
+.navbar {
+    border: 0;
+    font-size: 16px;
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0.96);
+    padding: 8px 15px;
+    min-height: 67px;
+    box-shadow: 0 5px 25px 0 hsla(0,0%,48%,.15);
+}
+.main-panel>.content {
+    padding: 30px 40px;
+    min-height: calc(100% - 123px);
+}
+.sidebar .sidebar-wrapper, body>.navbar-collapse .sidebar-wrapper {
+    position: relative;
+    max-height: calc(100vh - 75px);
+    min-height: 100%;
+    overflow: auto;
+    width: 260px;
+    z-index: 4;
+}
+.sidebar .logo, body>.navbar-collapse .logo {
+    padding: 10px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.sidebar .nav, body>.navbar-collapse .nav {
+    margin-top: 20px;
+    float: none;
+    display: block;
+}
+.sidebar .nav li .nav-link, body>.navbar-collapse .nav li .nav-link {
+    color: #FFFFFF;
+    margin: 5px 15px;
+    border-radius: 4px;
+    display: block;
+    padding: 10px 15px;
+}
+.sidebar .nav li .nav-link i, body>.navbar-collapse .nav li .nav-link i {
+    font-size: 28px;
+    margin-right: 15px;
+    width: 30px;
+    text-align: center;
+    vertical-align: middle;
+    float: left;
+}
+.sidebar .nav li .nav-link p, body>.navbar-collapse .nav li .nav-link p {
+    margin: 0;
+    line-height: 31px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: inline-flex;
+}
+
+.sidebar .logo .logo-text, body>.navbar-collapse .logo .logo-text {
+    text-transform: uppercase;
+    padding: 5px 0px;
+    display: block;
+    font-size: 18px;
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: 400;
+    line-height: 30px;
+}
+.sidebar .nav li .nav-link:hover, body>.navbar-collapse .nav li .nav-link:hover {
+    background: rgba(255, 255, 255, 0.13);
+    opacity: 1;
+}
+.sidebar .active {
+    background: rgba(255, 255, 255, 0.13);
+    opacity: 1;
+}
+
+/* Sidebar CSS End */
+
+.alert.alert-danger {
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+.alert.alert-success {
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
+/* Profile Page CSS */
+
+.btn-primary.disabled.focus, .btn-primary.disabled:focus, .btn-primary.disabled:hover, .btn-primary[disabled].focus, .btn-primary[disabled]:focus, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:hover {
+    background-color: #81a65f;
+    border-color: #81a65f;
+}
+
+.form-control[disabled], fieldset[disabled] .form-control {
+    background-color: #F5F5F5;
+    color: #888888;
+}
+
+.form-control {
+    background-color: #FFFFFF;
+    border: 1px solid #E3E3E3;
+    border-radius: 4px;
+    color: #000;
+    padding: 8px 12px;
+    height: 40px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.profile-title {
+    font-weight: 300;
+    font-size: 22px;
+    margin: 0;
+    color: #000;
+    padding: 0 0 20px 5px;
+}
+
+.div-space{
+    padding: 3px 10px;
+}
+
+.user-email {
+    color: #252525;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 5px 0;
+}
+
+.user-fullname {
+    font-size: 17px;
+    color: #000f;
+}
+
+/* Change Password Section */
+
+.changePassword-wrapper {
+    max-width: 450px;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.update-btn {
+    border-width: 2px;
+    color: #fff;
+    background-color: #81a65f;
+    opacity: 1;
+    border-color: #81a65f;
+    margin-right: 10px;
+}
+
+.cancle-btn {
+    border-width: 2px;
+    color: #FFFFFF;
+    background-color: #d9534f;
+    opacity: 1;
+    border-color: #d9534f;
+    margin-right: 10px;
+}
+
+.update-btn:hover, .update-btn:focus, .update-btn:active {
+    background-color: #81a65f;
+    color: #FFFFFF;
+    border: 2px solid #81a65f;
+}
+
+.reset-password-btn {
+    border-width: 2px;
+    color: #FFFFFF;
+    background-color: #81a65f;
+    opacity: 1;
+    border-color: #81a65f;
+    margin-right: 10px;
+}
+
+.reset-password-btn:hover, .reset-password-btn:focus, .reset-password-btn:active {
+    background-color: #81a65f;
+    color: #FFFFFF;
+    border: 2px solid #81a65f;
+}

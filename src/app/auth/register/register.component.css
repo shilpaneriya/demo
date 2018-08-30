@@ -1,0 +1,72 @@
+.register-form-wrapper {
+    max-width: 400px;
+    width: 100%;
+    margin: 7% auto;
+}
+.register-form-box {
+    color: #fff;
+    padding: 0 30px;
+    margin: 3em auto;
+    background: rgba(0, 0, 0, 0.40);
+}
+.register-form-box label {
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.register-form-wrapper .form-control {
+    padding: 0.7em 1em;
+    margin: 5px 0 20px 0;
+    color: #fff;
+    width: 100%;
+    background: transparent;
+    border: 1px solid #d9d9ce;
+    font-size: 13px;
+    outline: none;
+    letter-spacing: 0.9px;
+    border-radius: 0;
+    font-weight: 300;
+}
+
+.register-btn {
+    width: 100%;
+    text-transform: uppercase;
+    background: #d6ff5f;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0.7em 0;
+    letter-spacing: 1px;
+}
+.register-btn:hover, .register-btn:focus, .register-btn:active {
+    color: #000;
+    background: #d6ff5f;
+}
+
+.form-tagline {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 0.6px;
+    padding: 25px 0 10px 0;
+}
+.registerLink {
+    text-align: center;
+    font-size: 16px;
+    padding: 15px 0 35px 0;
+}
+
+.registerLink a {
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    font-weight: 300;
+}
+
+.padding {
+    padding: 20px 0;
+    margin: 0;
+}

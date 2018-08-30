@@ -1,0 +1,74 @@
+<div class="main-content-wrapper">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+          <div class="register-form-wrapper">
+            <div class="project-logo"><img src="../assets/images/logo.png"></div>
+            <div class="register-form-box">
+              <p class="form-tagline">Register a new account</p>
+              <form (ngSubmit)="onRegister(myRegisterForm)" #myRegisterForm="ngForm">
+                  <div class="form-group">
+                      <label for="address">Address</label>
+                      <input type="text" id="address" name="address" class="form-control" ngModel required address #address="ngModel">
+                      <div *ngIf="address.invalid && (address.dirty || address.touched)" class="alert alert-danger">
+                          <div *ngIf="address.errors.required">Address is required!</div>
+                      </div>
+                    </div>
+                <div class="form-group">
+                  <label for="fname">First Name</label>
+                  <input type="text" id="fname" name="fname" class="form-control" ngModel required fname #fname="ngModel">
+                  <div *ngIf="fname.invalid && (fname.dirty || fname.touched)" class="alert alert-danger">
+                      <div *ngIf="fname.errors.required">Firstname is required!</div>
+                  </div>
+                </div>
+                <div class="form-group">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lname" class="form-control" ngModel required lname #lname="ngModel">
+                    <div *ngIf="lname.invalid && (lname.dirty || lname.touched)" class="alert alert-danger">
+                        <div *ngIf="lname.errors.required">Lastname is required!</div>
+                    </div>
+                  </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" class="form-control" ngModel required email #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                  <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+                    <div *ngIf="email.errors.required">Email field is required!</div>
+                    <div *ngIf="email.errors.pattern">Please enter valid email!</div>
+                  </div>
+                </div>
+                <div class="form-group">
+                    <label for="username">User Name</label>
+                    <input type="text" id="username" name="username" class="form-control" ngModel required username #username="ngModel">
+                    <div *ngIf="username.invalid && (username.dirty || username.touched)" class="alert alert-danger">
+                        <div *ngIf="username.errors.required">Username is required!</div>
+                    </div>
+                  </div>
+                <div class="form-group">
+                    <label for="mobilenumber">Mobile Number</label>
+                    <input type="tel" id="mobilenumber" name="mobilenumber" class="form-control" ngModel required mobilenumber #mobilenumber="ngModel" pattern="^\d{10}$">
+                    <div *ngIf="mobilenumber.invalid && (mobilenumber.dirty || mobilenumber.touched)" class="alert alert-danger">
+                      <div *ngIf="mobilenumber.errors.required">Contact Number is required!</div>
+                      <div *ngIf="mobilenumber.errors.pattern">Please enter a 10-digit phone number</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary register-btn" type="submit" [disabled]="!myRegisterForm.valid">Register</button>
+                </div>
+              </form>
+              <p class="registerLink">
+                <a routerLink="/">I already have an account</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="container">
+    <div class="col-md-12">
+      <h3 style="text-align:center;">{{ data?.message }}</h3>
+    </div>
+  </div> -->
+  
+    
